@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mc Donald</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="orderPage">
+        <h1>MC DONALD'S VIRTUAL ORDERING</h1>
+        <p>MENU</p>
+        <div class="foodItem">
+            <img src="https://img.freepik.com/premium-vector/delicious-burger-icon-food-beverages_22052-1.jpg?w=740" alt="">
+            <input type="checkbox"  id="burger" onclick="checkedBurger()">
+            <label for="burger">BURGER</label>
+        </div>
+        <div class="foodItem">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRP0orbYCB_wBMTbHGoMCm0zE8ug8ANMpvhg&usqp=CAU" alt="">
+            <input type="checkbox" id="coke" onclick="checkedCoke()">
+            <label for="coke">COKE</label>
+        </div>
+        <div class="foodItem">
+            <img src="https://img.freepik.com/premium-vector/cute-happy-french-fries-icon-cartoon-illustration_274619-664.jpg?w=2000" alt="">
+            <input type="checkbox" id="fries" onclick="checkedFries()">
+            <label for="fries">FRIES</label>
+        </div>
+
+        <button onclick="placeOrder()">PLACE ORDER</button>
+    </div>
+
+    <div id="orderConfirm">
+        <p class="text">Your Order No. is : <span id="ordernumber"></span></p>
+        <h1>Order Has been Placed !!</h1>
+        <div id="show">
+            <img id="burgerImg" src="" alt="">
+            <img id="cokeImg" src="" alt="">
+            <img id="friesImg" src="" alt="">
+        </div>
+        <h2>Have a Great Day!!</h2>
+    </div>
+</body>
+</html>
+<script src="index.js"></script>
