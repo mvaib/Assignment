@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Pay</title>
+    <script src="https://kit.fontawesome.com/3e553bfb59.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="cont">
+        <div id="paymentPage">
+            <label for="name">Name</label></br>
+            <input type="text" id="name" placeholder="Name"></br>
+            <label for="amount">Amount</label></br>
+            <input type="number" id="amount" placeholder="Amount"></br>
+            <label for="" id="upiText">UPI : <span>abcd1@okhdfcbank</span></label>
+            <label for="upi" id="upilable">UPI</label>
+            <input type="text" id="upi">
+            <div id="btn">
+                <button onclick="next()" id="nextbtn">NEXT</button>
+                <button onclick="pay()" id="paybtn">PAY</button>
+            </div>
+        </div>
+        <div id="contSuccessful">
+            <div id="Sucess">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h2>Payment of  ₹ <span id="successfulpaidAmount"></span> to <span id="successfulpaidTo"></span> Successful</h2>
+            <h4>Please do not press back or close the app</h4>
+        </div>
+        <div id="contProcessing">
+            <div id="Processing">
+    
+            </div>
+            <h2>Payment Processing</h2>
+            <h4>Please do not press back or close the app</h4>
+        </div>
+        <div id="contFail">
+            <div id="Fail">
+                <i class="fa-solid fa-exclamation"></i>
+            </div>
+            <h2>Payment of  ₹ <span id="failpaidAmount"></span> to <span id="failpaidTo"></span> failed</h2>
+            <h4>Please press back or close the app</h4>
+        </div>
+    </div>
+        
+</body>
+</html>
+<script src="index.js"></script>
