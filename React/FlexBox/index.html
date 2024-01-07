@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .cont{
+            border: 1.5px solid black;
+            display: flex;
+            width: 40%;
+            height: 100px;
+            background: rgb(230, 206, 162);
+            margin: auto;
+            margin-top: 40px;
+
+        }
+        .parent{
+            margin-top: 0px;
+            font-size: 20px;
+        }
+        .flexBox{
+            height: 100%;
+            width: 80%;
+            /* border: 2px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+        }
+        .flexBox div{
+            width: 13%;
+            height: 70px;
+            border: 1.5px solid black;
+        }
+        .boxOne{
+
+            background-color: red;
+        }
+        .boxTwo{
+            background-color: yellow;
+        }
+        .boxThree{
+            background-color: green;
+        }
+        .boxFour{
+            background-color: rgb(121, 28, 209);
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
+<script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+<script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+<script>
+    let element = React.createElement("div",{className :"cont",
+    children :[React.createElement("p",{className : "parent", children:"parent"}),
+    React.createElement("div",{className : "flexBox", children:[React.createElement("div",{className : "boxOne", children :"1"}),
+    React.createElement("div",{className : "boxTwo", children : "2"}),
+    React.createElement("div",{className : "boxThree", children:"3"}),
+    React.createElement("div",{className :"boxFour", children :"4"})]})]})
+
+
+
+    let Root = ReactDOM.createRoot(document.getElementById("root"))
+    Root.render(element)
+</script>
